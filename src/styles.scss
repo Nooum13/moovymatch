@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+// src/styles.scss — correct import order
+// 1. Google Fonts (before everything)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// 2. Your Bootstrap variable overrides
+@import 'scss/bsOverride/variables';
+
+// 3. Bootstrap SCSS — uses your overrides
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// 4. Your custom component styles — built on top of Bootstrap
+@import 'scss/bsOverride/components';
+
+body {
+  background-color: #bfbfbf;
+}
+
+
+.header-section {
+  background-color: $light;
+}
+.core-section {
+  
+}
+.footer-section {
+  background-color: $dark;
+  color: #cfcfcf;
+}
